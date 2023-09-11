@@ -74,6 +74,7 @@ btn_divide = tk.Button(root, text="/", command= lambda: add_to_calculation("/"),
 btn_equals = tk.Button(root, text="=", command= lambda: evaluate_calculation(), width=5, font=("Arial,14"))
 btn_openBracket = tk.Button(root, text="(", command= lambda: add_to_calculation("("), width=5, font=("Arial,14"))
 btn_closeBracket = tk.Button(root, text=")", command= lambda: add_to_calculation(")"), width=5, font=("Arial,14"))
+btn_clear = tk.Button(root, text="C", command=clear_field, width=5, font=("Arial, 14"))
 
 #Positioning the buttons on the grid
 btn_0.grid(row=5,column=1)
@@ -94,7 +95,8 @@ btn_multiply.grid(row=4,column=4)
 btn_divide.grid(row=5,column=4)
 btn_openBracket.grid(row=5,column=2)
 btn_closeBracket.grid(row=5,column=3)
-btn_equals.grid(row=6,columnspan=5)
+btn_equals.grid(row=6,column=2)
+btn_clear.grid(row=6,column=3)
 
 
 #Mainloop infinitely runs the application, waits for an event to occur, and then runs said event
